@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import si Component yang sudah dibuat
+// ButtonClass dan ButtonFunctional
 
+import ButtonClass from "./components/ButtonClass";
+import ButtonFunctional from "./components/ButtonFunctional";
+
+// Kompponen Utamanya
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={
+        // Jadi Object
+        {
+          padding: "0.5em",
+          display: "flex",
+          flexDirection: "row",
+          gap: "0.5em",
+        }
+      }
+    >
+      <ButtonClass text="Data Class" />
+      <ButtonClass text="Custom" />
+      <ButtonClass />
+
+      <ButtonFunctional text="Data Functional" />
+      <ButtonFunctional text="Custom" />
+      <ButtonFunctional text="Banget" />
+
+      <ButtonFunctional />
     </div>
   );
 }
